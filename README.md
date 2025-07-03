@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)
 
+
 Bu proje, gri tonlamalı (grayscale) görüntüleri AES şifreleme standardını kullanarak **ECB (Electronic Codebook)** ve **CBC (Cipher Block Chaining)** modlarında şifrelemek ve çözmek için geliştirilmiş bir komut satırı aracıdır (CLI).
 
 Projenin temel amacı, farklı blok şifreleme modlarının görseller üzerindeki etkilerini pratik olarak göstermektir. Özellikle, ECB modunun desen koruma zafiyeti ile CBC modunun bu zafiyeti nasıl ortadan kaldırdığı görsel olarak sergilenmektedir.
@@ -10,9 +11,9 @@ Projenin temel amacı, farklı blok şifreleme modlarının görseller üzerinde
 
 ECB modu, her bloğu aynı anahtarla bağımsız olarak şifreler. Bu durum, orijinal görüntüdeki desenlerin şifrelenmiş görüntüde de korunmasına neden olur. CBC modu ise her bloğu bir önceki şifreli blokla zincirleyerek bu sorunu çözer ve çok daha güvenli bir şifreleme sağlar.
 
-| Orijinal Görüntü | ECB Modunda Şifrelenmiş | CBC Modunda Şifrelenmiş |
-| :--------------: | :----------------------: | :----------------------: |
-| ![Original Image](./assets/original.png) | ![ECB Encrypted](./assets/ecb_encrypted.png) | ![CBC Encrypted](./assets/cbc_encrypted.png) |
+| Orijinal Görüntü | ECB Modunda Şifrelenmiş (128-bit) | CBC Modunda Şifrelenmiş (128-bit) |
+| :--------------: | :-------------------------------: | :-------------------------------: |
+| ![Original Image](./images/original.png) | ![ECB Encrypted](./images/original_ecb_128_encrypted.png) | ![CBC Encrypted](./images/original_cbc_128_encrypted.png) |
 
 > **Analiz:** Görüldüğü gibi, ECB modunda şifrelenmiş görüntünün yapısı hala tahmin edilebilirken, CBC modunda şifrelenmiş görüntü tamamen rastgele bir gürültüye dönüşmüştür.
 
@@ -52,10 +53,9 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
 1.  **Projeyi Klonlayın:**
     ```bash
-    git clone https://github.com/kullanici-adiniz/image_cipher.git
+    git clone https://github.com/cihan-atas/image_cipher.git
     cd image_cipher
     ```
-    *Not: Yukarıdaki URL'i kendi GitHub repo URL'iniz ile güncelleyin.*
 
 2.  **Sanal Ortam Oluşturun ve Aktif Edin (Önerilir):**
     ```bash
@@ -85,7 +85,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin.
 
 Betiği çalıştırdığınızda sizi aşağıdaki gibi bir menü karşılar:
 
-![Terminal Arayüzü](./assets/terminal_interface.png)
+![Terminal Arayüzü](./images/terminal_interface.png)
 
 ### Örnek İş Akışı
 
